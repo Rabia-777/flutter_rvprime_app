@@ -12,7 +12,6 @@ class _PageLogoState extends State<PageLogo> {
   void initState() {
     super.initState();
 
-    //  Auto-navigation après 10 secondes
     Future.delayed(const Duration(seconds: 10), () {
       if (mounted) {
         Navigator.pushReplacementNamed(context, "/accueil");
@@ -32,7 +31,6 @@ class _PageLogoState extends State<PageLogo> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              // ------ LOGO ------
               Stack(
                 clipBehavior: Clip.none,
                 children: [
@@ -64,8 +62,6 @@ class _PageLogoState extends State<PageLogo> {
                       ],
                     ),
                   ),
-
-                  // --- Petit rond rouge ---
                   Positioned(
                     right: -2,
                     top: -6,
@@ -85,7 +81,7 @@ class _PageLogoState extends State<PageLogo> {
               const SizedBox(height: 10),
 
               const Text(
-                "TV PRIME",
+                "RV PRIME",
                 style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,

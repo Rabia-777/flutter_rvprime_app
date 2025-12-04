@@ -7,8 +7,6 @@ class PageEcranAccueil extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFF9EE6E8),
-
-      // 🔹 AppBar
       appBar: AppBar(
         backgroundColor: const Color(0xFF9EE6E8),
         elevation: 0,
@@ -19,7 +17,6 @@ class PageEcranAccueil extends StatelessWidget {
           },
         ),
 
-        // 🔍 BARRE DE RECHERCHE
         title: GestureDetector(
           onTap: () {
             Navigator.pushNamed(context, "/explore");
@@ -43,8 +40,6 @@ class PageEcranAccueil extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-
-      // 🔹 BODY
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -73,8 +68,6 @@ class PageEcranAccueil extends StatelessWidget {
                         style: TextStyle(fontSize: 12),
                       ),
                       const SizedBox(height: 20),
-
-                      // 🔹 BOUTONS DES CHAÎNES TV
                       ..._buildButtons(context),
 
                       const SizedBox(height: 10),
@@ -86,12 +79,9 @@ class PageEcranAccueil extends StatelessWidget {
             ),
 
             const SizedBox(height: 20),
-
-            // 🔹 BARRE DU BAS
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                // ▶️ Bouton TV
                 IconButton(
                   icon: const Icon(Icons.tv, size: 40),
                   onPressed: () {
@@ -99,7 +89,6 @@ class PageEcranAccueil extends StatelessWidget {
                   },
                 ),
 
-                // 🎬 Live Events
                 IconButton(
                   icon: const Icon(Icons.play_circle_fill, size: 40),
                   onPressed: () {
@@ -114,7 +103,6 @@ class PageEcranAccueil extends StatelessWidget {
     );
   }
 
-  // 🔹 LISTE DES CHAÎNES
   List<Widget> _buildButtons(BuildContext context) {
     List<String> channels = [
       "beIN SPORTS",
